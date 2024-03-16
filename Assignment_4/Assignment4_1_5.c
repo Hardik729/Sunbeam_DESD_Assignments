@@ -1,19 +1,17 @@
-#include <stdio.h>
+#include<stdio.h>
 
-void repeatCharacter(char ch,int times,char* result)
-{
-    for (int i=0;i<times;i++)
-        result[i] = ch;
-    result[times] = '\0';
-}
+void display(char ch,int n);
 
 int main()
 {
-    char character='*';
-    int numberOfTimes=10;
-    char repeatedChars[numberOfTimes + 1];
-    repeatCharacter(character,numberOfTimes,repeatedChars);
-    printf("%s\n",repeatedChars);
-    return 0;
+	display('A',5);
+	return 0;
 }
 
+void display(char ch,int n)
+{
+	for(int i=0;i<n;i++)
+		printf("%-2c",ch);
+	printf("\n");
+
+}
